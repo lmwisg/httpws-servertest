@@ -1,0 +1,28 @@
+{
+  "name": "httpws-servertest",
+  "version": "0.1.0",
+  "description": "For PHP server use",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+	"ws": "0.4.32",
+	"najax": "0.1.5"
+  },
+  "engines": {
+    "node": "0.10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lmwisg/httpws-servertest/"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "ws",
+	"http"
+  ],
+  "author": "Lim Wei Siong",
+  "license": "MIT"
+}
