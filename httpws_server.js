@@ -1,13 +1,20 @@
 var http = require('http');
 var url = require('url');
+var express = require('express');
+var app = express();
 
-http.createServer(function (req, res) {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello World\n');
+app.set('port', (process.env.PORT || 5000))
+app.use(express.static(__dirname + '/public'))
+
+app.get('/', function(request, response) {
   
-	// - Make a ws server
-	// - Send alert message to client ws server
-	// - Close
+	var url_parts = url.parse(request.url, true);
+	var query = url_parts.query;
+
+//	response.send('Hello World!');
+	response.send(query);
+  
+  /*
 	var ipaddress = 'http://192.168.0.121';
 	var port = 8081;
 	ipaddress = ipaddress + ":" + port;
@@ -22,9 +29,10 @@ http.createServer(function (req, res) {
 		// Send attack alert, with: sessionid and attackdata
 		ws.send('alert;' + process.argv[2] + ";" + process.argv[3]);
 		ws.close();
-	});
+	});  
+  */
+})
 
-  //res.close();
-  
-}).listen(1337, '127.0.0.1');
-console.log('Server running at http://127.0.0.1:1337/');
+app.listen(app.get('port'), function() {
+  console.log("Node app is running at localhost:" + app.get('port'))
+})

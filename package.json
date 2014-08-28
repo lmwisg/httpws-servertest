@@ -21,7 +21,8 @@
     "node",
     "heroku",
     "ws",
-	"http"
+	"http",
+	"express"
   ],
   "author": "Lim Wei Siong",
   "license": "MIT"

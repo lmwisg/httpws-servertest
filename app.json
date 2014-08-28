@@ -1,7 +1,7 @@
 {
-  "name": "Node.js Getting Started",
-  "description": "A barebones Node.js app using Express 4",
+  "name": "httpws-server",
+  "description": "For PHP server use",
   "repository": "https://github.com/heroku/node-js-getting-started",
-  "logo": "http://node-js-sample.herokuapp.com/node.svg",
-  "keywords": ["node", "express", "static"]
+  "logo": "https://github.com/lmwisg/httpws-servertest",
+  "keywords": ["node", "heroku", "ws", "http", "express"]
 }
