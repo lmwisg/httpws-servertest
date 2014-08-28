@@ -11,7 +11,7 @@ app.get('/', function(request, response) {
 	var url_parts = url.parse(request.url, true);
 	var query = url_parts.query;
 
-//	response.send('Hello World!');
+	response.send('Hello World!');
 	response.send(query);
   
   /*
